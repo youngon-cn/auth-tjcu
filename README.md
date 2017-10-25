@@ -1,4 +1,5 @@
 ## auth-tjcu
+> TJCU authserver simulation
 
 [![NPM](https://nodei.co/npm/auth-tjcu.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/auth-tjcu/)
 
