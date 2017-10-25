@@ -1,7 +1,8 @@
 ## auth-tjcu
 > TJCU authserver simulation
 
-[![NPM](https://nodei.co/npm/auth-tjcu.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/auth-tjcu/)
+[![npm package](https://img.shields.io/npm/v/auth-tjcu.svg)](https://npmjs.org/package/auth-tjcu)
+[![npm downloads](http://img.shields.io/npm/dm/auth-tjcu.svg)](https://npmjs.org/package/auth-tjcu)
 
 ### How to install:
 
