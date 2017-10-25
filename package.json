@@ -1,0 +1,38 @@
+{
+  "name": "auth-tjcu",
+  "version": "0.1.0",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "./node_modules/.bin/gulp"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/youngon-cn/auth-tjcu.git"
+  },
+  "keywords": [
+    "auth",
+    "tjcu"
+  ],
+  "author": "F-loat <945852046@qq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/youngon-cn/auth-tjcu/issues"
+  },
+  "homepage": "https://github.com/youngon-cn/auth-tjcu#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglifyjs": "^0.6.2"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "superagent": "^3.7.0"
+  }
+}
