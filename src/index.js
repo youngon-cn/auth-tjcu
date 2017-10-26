@@ -5,16 +5,16 @@ const authServer = (service, data) => new Promise(async (resolve, reject) => {
   const url = `http://authserver.tjcu.edu.cn/authserver/login?service=${service}`;
   const agent = request.agent();
   const { username, password, captcha } = data;
-  const loginPage = await agent.get(url).timeout({
-    response: 6000,
-  });
-  const $ = cheerio.load(loginPage.text);
-  const lt = $('[name=lt]').val();
-  const dllt = $('[name=dllt]').val();
-  const execution = $('[name=execution]').val();
-  const _eventId = $('[name=_eventId]').val();
-  const rmShown = $('[name=rmShown]').val();
   try {
+    const loginPage = await agent.get(url).timeout({
+      response: 6000,
+    });
+    const $ = cheerio.load(loginPage.text);
+    const lt = $('[name=lt]').val();
+    const dllt = $('[name=dllt]').val();
+    const execution = $('[name=execution]').val();
+    const _eventId = $('[name=_eventId]').val();
+    const rmShown = $('[name=rmShown]').val();
     const rst = await agent.post(url)
       .type('form')
       .set('Cookie', loginPage.header['set-cookie'])

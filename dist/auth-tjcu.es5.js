@@ -17,12 +17,13 @@ var authServer = function authServer(service, data) {
               url = 'http://authserver.tjcu.edu.cn/authserver/login?service=' + service;
               agent = request.agent();
               username = data.username, password = data.password, captcha = data.captcha;
-              _context.next = 5;
+              _context.prev = 3;
+              _context.next = 6;
               return agent.get(url).timeout({
                 response: 6000
               });
 
-            case 5:
+            case 6:
               loginPage = _context.sent;
               $ = cheerio.load(loginPage.text);
               lt = $('[name=lt]').val();
@@ -30,7 +31,6 @@ var authServer = function authServer(service, data) {
               execution = $('[name=execution]').val();
               _eventId = $('[name=_eventId]').val();
               rmShown = $('[name=rmShown]').val();
-              _context.prev = 12;
               _context.next = 15;
               return agent.post(url).type('form').set('Cookie', loginPage.header['set-cookie']).withCredentials().send({
                 username: username,
@@ -57,7 +57,7 @@ var authServer = function authServer(service, data) {
 
             case 20:
               _context.prev = 20;
-              _context.t0 = _context['catch'](12);
+              _context.t0 = _context['catch'](3);
 
               if (_context.t0.errno === 'ETIMEDOUT') resolve({ state: 0, msg: '统一登录平台请求超时' });
               reject(_context.t0);
@@ -67,7 +67,7 @@ var authServer = function authServer(service, data) {
               return _context.stop();
           }
         }
-      }, _callee, undefined, [[12, 20]]);
+      }, _callee, undefined, [[3, 20]]);
     }));
 
     return function (_x, _x2) {
